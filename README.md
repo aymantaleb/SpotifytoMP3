@@ -10,13 +10,13 @@ As of now it only goes through the playlists and returns a list of the urls and 
 
 ### Issue with pytube search function
 I have noticed there is an issue with the pytube search function regarding certain video renderers. I fixed this by modifying the search class:
-In the ['fetch_and_parse'](#code) item_renderer conditional for loop I added ['
-                if 'reelShelfRenderer' in video_details:
+In the ['fetch_and_parse'](#code) item_renderer conditional for loop I added 
+['               if 'reelShelfRenderer' in video_details:
                     continue
 
                 if 'showingResultsForRenderer' in video_details:
                     continue
                 
                 if 'movieRenderer' in video_details:
-                    continue
-'](#code) Which seemed to fix the errors I was getting
+                    continue'](#code) 
+Which seemed to fix the errors I was getting
