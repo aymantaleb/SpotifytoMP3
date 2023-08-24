@@ -1,5 +1,9 @@
 .vscode/*
 .cache
+AlbumArt/*
+.jpg
+.csv
+
 
 # Local History for Visual Studio Code
 .history/
