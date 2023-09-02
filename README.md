@@ -9,7 +9,7 @@ It works by taking your playlist URL and compiles a list of the songs and artist
 You will need to generate a Spotify client_id, client_sercret and URI to access the [Spotify API](https://developer.spotify.com/documentation/web-api). And for each playlist you want to pull, you need the playlist link. So that you won't have to hardcode the client_id and client_secret, you can just add them to your environment variables:
 
 Windows:
-<ul>
+<ol>
 <li>Open the Start menu and search for "Environment Variables."
 
 <li>Click on "Edit the system environment variables."
@@ -22,7 +22,7 @@ Windows:
 
 <li>Click "OK" to close each of the windows.
 
-</ul>
+</ol>
 
 macOS or Linux:
 You can set environment variables directly in your terminal session or by adding them to your shell's configuration file (e.g., .bashrc, .zshrc, or similar) to make them persist across sessions.
