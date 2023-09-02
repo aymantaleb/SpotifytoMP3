@@ -3,7 +3,7 @@
 AlbumArt/*
 *.jpg
 *.csv
-
+mp3s/*
 
 # Local History for Visual Studio Code
 .history/
