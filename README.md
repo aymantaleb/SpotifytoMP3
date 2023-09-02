@@ -34,6 +34,7 @@ For example, in your terminal, you can set environment variables like this:
                 export SPOTIPY_REDIRECT_URI='your-app-redirect-url'
 
 Or add them to the shell's configuration file:
+
                 source ~/.bashrc  # or source ~/.zshrc if using Zsh
 
 ---
