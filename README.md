@@ -6,7 +6,35 @@ A multi-threaded python script to take a Spotify playlist using [spotipy](https:
 
 It works by taking your playlist URL and compiles a list of the songs and artists, then it donwloads the album art associated with the song (this is for a GUI I want to eventually make), then it finds Youtube videos of the songs, then it downloads the video as an mp4 since pytube is only capable of that, and finally it uses FFmpeg to convert the mp4s to mp3s. If an album art is not found it will just use the oldmanShrug.jpg instead. 
 
-You will need to generate a Spotify client_id, client_sercretand URI to access the [Spotify API](https://developer.spotify.com/documentation/web-api). And for each playlist you want to pull, you need the playlist id, which can be [found in the URL](https://clients.caster.fm/knowledgebase/110/How-to-find-Spotify-playlist-ID.html).
+You will need to generate a Spotify client_id, client_sercret and URI to access the [Spotify API](https://developer.spotify.com/documentation/web-api). And for each playlist you want to pull, you need the playlist link. So that you won't have to hardcode the client_id and client_secret, you can just add them to your environment variables:
+
+Windows:
+<ul>
+<li>Open the Start menu and search for "Environment Variables."
+
+<li>Click on "Edit the system environment variables."
+
+<li>In the "System Properties" window, click the "Environment Variables" button.
+
+<li>Under the "User variables" section, click "New" to add a new environment variable.
+
+<li>Enter SPOTIPY_CLIENT_ID for the "Variable name" and your actual Spotify client ID for the "Variable value." Repeat this step for SPOTIPY_CLIENT_SECRET and SPOTIPY_REDIRECT_URI as well.
+
+<li>Click "OK" to close each of the windows.
+
+</ul>
+
+macOS or Linux:
+You can set environment variables directly in your terminal session or by adding them to your shell's configuration file (e.g., .bashrc, .zshrc, or similar) to make them persist across sessions.
+
+For example, in your terminal, you can set environment variables like this:
+
+                export SPOTIPY_CLIENT_ID='your-spotify-client-id'
+                export SPOTIPY_CLIENT_SECRET='your-spotify-client-secret'
+                export SPOTIPY_REDIRECT_URI='your-app-redirect-url'
+
+Or add them to the shell's configuration file:
+                source ~/.bashrc  # or source ~/.zshrc if using Zsh
 
 ---
 
@@ -22,4 +50,4 @@ In the fetch_and_parse item_renderer conditional's for loop I added
                 
                 if 'movieRenderer' in video_details:
                     continue' 
-Which seemed to fix the errors I was getting
+Which seemed to fix the errors I was getting.
