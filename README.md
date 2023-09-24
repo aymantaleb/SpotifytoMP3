@@ -6,7 +6,7 @@ A multi-threaded python script to take a Spotify playlist using [spotipy](https:
 
 It works by taking your playlist URL and compiles a list of the songs and artists, then it donwloads the album art associated with the song (this is for a GUI I want to eventually make), then it finds Youtube videos of the songs, then it downloads the video as an mp4 since pytube is only capable of that, and finally it uses FFmpeg to convert the mp4s to mp3s. If an album art is not found it will just use the oldmanShrug.jpg instead. 
 
-You will need to generate a Spotify client_id, client_sercret and URI to access the [Spotify API](https://developer.spotify.com/documentation/web-api). And for each playlist you want to pull, you need the playlist link. So that you won't have to hardcode the client_id and client_secret, you can just add them to your environment variables:
+You will need to generate a Spotify client_id, client_sercret and URI to access the [Spotify API](https://developer.spotify.com/documentation/web-api). For now this will not work unless you create your own Spotify extension and use those ids to run this script. I will work on making this available for anyone to use just with a Spotify log in if need be. And for each playlist you want to pull, you need the playlist link. So that you won't have to hardcode the client_id and client_secret, you can just add them to your environment variables:
 
 Windows:
 <ol>
@@ -51,4 +51,4 @@ In the fetch_and_parse item_renderer conditional's for loop I added
                 
                 if 'movieRenderer' in video_details:
                     continue' 
-Which seemed to fix the errors I was getting.
+Which seemed to fix the errors I was getting. I got this idea from this [issue posted on the pytube Github.](https://github.com/pytube/pytube/issues/1270#issuecomment-1436041377)
