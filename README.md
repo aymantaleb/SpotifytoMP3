@@ -51,4 +51,4 @@ In the fetch_and_parse item_renderer conditional's for loop I added
                 
                 if 'movieRenderer' in video_details:
                     continue' 
-Which seemed to fix the errors I was getting.
+Which seemed to fix the errors I was getting. I got this idea from this [issue posted on the pytube Github.](https://github.com/pytube/pytube/issues/1270#issuecomment-1436041377)
