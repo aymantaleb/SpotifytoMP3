@@ -1,4 +1,4 @@
-# SpoitfytoMP3
+# SpotifytoMP3
 
 ## Created by Ayman Taleb 08/21/2023
 
